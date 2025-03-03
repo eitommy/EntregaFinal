@@ -11,3 +11,6 @@ Este proyecto es una aplicación web de blog desarrollada utilizando Django. Per
 - **Inicio de sesión**: Los usuarios pueden iniciar sesión en la plataforma.
 - **Registro de usuario**: Los usuarios pueden crear una cuenta con un formulario de registro.
 - **Cerrar sesión**: Los usuarios pueden cerrar sesión y volver a la página de inicio.
+
+## video del proyecto
+Puedes ver el video aqui: [Ver Video](https://drive.google.com/file/d/15Q3klaPCgnLyHrri4hsTXi8JM8jhD8xF/view?usp=sharing)
