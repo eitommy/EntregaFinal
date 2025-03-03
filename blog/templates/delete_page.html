@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar página</h1>
+<p>¿Seguro que quieres eliminar la página "{{ page.title }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.content }}</p>
+
+    {% if page.image %}
+        <img src="{{ page.image.url }}" alt="Imagen de la página">
+    {% endif %}
+
+    {% if user == page.author %}
+        <br><br>
+        <a href="{% url 'update_page' pk=page.pk %}">Editar página</a> 
+        <form action="{% url 'delete_page' pk=page.pk %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Eliminar página</button>  
+        </form>
+    {% endif %}
+    
+    <br><br>
+{% endblock %}

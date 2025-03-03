@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Blogs</h1>
+{% if message %}
+    <p>{{ message }}</p>
+{% else %}
+    {% for page in pages %}
+        <div>
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.content|truncatewords:20 }}</p>
+            <a href="{% url 'page_detail' page.id %}">Leer más</a>
+        </div>
+    {% endfor %}
+{% endif %}
+{% endblock %}
