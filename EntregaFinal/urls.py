@@ -13,7 +13,8 @@ urlpatterns = [
     path('pages/', include('blog.urls')), 
     path('', views.home, name='home'),  
     path('login/', views.login_user, name='login'),
-    path('logout/', views.logout_user, name='logout'),  
+    path('logout/', views.logout_user, name='logout'), 
+    path('users/', include('users.urls')), 
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
