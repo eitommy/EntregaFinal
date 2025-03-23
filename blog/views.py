@@ -46,9 +46,8 @@ class PageCreateView(LoginRequiredMixin, CreateView):
 
 class PageUpdateView(LoginRequiredMixin, UpdateView):
     model = Page
-    fields = ['title', 'content', 'image']
-    form_class = PageForm
-    template_name = 'blog/update_page.html'
+    form_class = PageForm  # Usamos el formulario que ya has definido
+    template_name = 'update_page.html'
     success_url = reverse_lazy('pages')
 
     def get_success_url(self):
